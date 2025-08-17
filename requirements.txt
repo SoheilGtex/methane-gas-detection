@@ -1,0 +1,5 @@
+numpy
+pandas
+pyserial
+pyyaml
+matplotlib
