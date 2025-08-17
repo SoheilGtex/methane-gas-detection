@@ -1,6 +1,6 @@
-mode: sim           # sim | serial
+mode: sim
 serial:
-  port: "COM5"      # e.g., /dev/ttyUSB0 on Linux
+  port: "COM5"
   baud: 9600
 sampling_hz: 5
 calibration_seconds: 12
@@ -13,7 +13,7 @@ threshold:
   hysteresis: 0.5
 ppm:
   enabled: false
-  rs_r0: 1.0        # set if available from circuit
+  rs_r0: 1.0
 output:
   save_csv: "data/sample_sim.csv"
   make_plot: true
