@@ -24,3 +24,4 @@ class GasDetector:
         elif self.alert and value < (self.threshold - self.hyst*self.sigma):
             self.alert = False
         return self.alert
+#test
