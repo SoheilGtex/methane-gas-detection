@@ -153,7 +153,7 @@ Missing simulator samples remain persisted rows with nullable raw/filtered value
 
 ## Docker and CI status
 
-The repository includes a non-root `Dockerfile` and GitHub Actions for Python 3.11/3.12 installation, Ruff, and pytest. Docker was **NOT RUN** because Docker is unavailable in the current sandbox. Remote GitHub Actions are **UNVERIFIED** because no remote workflow execution was observed.
+The repository includes a non-root `Dockerfile` and GitHub Actions for Python 3.11/3.12 installation, Ruff, and pytest. Local Docker verification passed: the image built successfully, the container started successfully, and `/health` returned HTTP 200 with `{"status":"ok"}`. Remote GitHub Actions CI also passed on Python 3.11 and 3.12 for both `push` and `pull_request` events.
 
 ## Limitations and future work
 

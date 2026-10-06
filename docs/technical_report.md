@@ -108,7 +108,9 @@ For stable and drift, event detection rate is not informative because there are 
 ## Validation status
 
 - **IMPLEMENTED AND TESTED:** drift validation, onset classes, event/sample metric separation, same-space preprocessing, effective CUSUM metadata, ground-truth persistence, serial metadata separation, smoke command, clean-code artifact workflow, SQLite/API behavior, 22 focused tests, and Ruff.
-- **IMPLEMENTED BUT UNVERIFIED:** serial execution on physical hardware; Dockerfile; remote GitHub Actions.
+- **VERIFIED LOCALLY:** Docker image build, container startup, and FastAPI `/health` endpoint returning HTTP 200.
+- **VERIFIED REMOTELY:** GitHub Actions CI on Python 3.11 and 3.12 for both `push` and `pull_request` events.
+- **IMPLEMENTED BUT UNVERIFIED:** serial execution on physical hardware.
 - **NOT IMPLEMENTED:** physical gas calibration, real sensor dataset, PostgreSQL, frontend, visualization, ML, cloud deployment, and certified safety evaluation.
 
-Docker remains **NOT RUN** because the Docker CLI is unavailable. Remote CI remains **UNVERIFIED** because no remote workflow run was observed.
+Local Docker verification was completed successfully: the image built, the container started under Docker Desktop, and `/health` returned HTTP 200 with `{"status":"ok"}`. Remote GitHub Actions CI passed on Python 3.11 and 3.12 for both `push` and `pull_request` events.
