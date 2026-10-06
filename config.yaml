@@ -1,20 +1,22 @@
-mode: sim
-serial:
-  port: "COM5"
-  baud: 9600
-sampling_hz: 5
-calibration_seconds: 12
-smooth:
-  type: "ema"       # ema | ma
-  ema_alpha: 0.20
-  ma_window: 8
-threshold:
-  k_sigma: 3.0
+simulation:
+  scenario: leak
+  seed: 7
+  samples: 300
+  sample_period: 1.0
+  baseline: 320
+  noise_sigma: 6
+  event_start: 100
+  event_end: 180
+  event_amplitude: 100
+detector:
+  algorithm: zscore
+  threshold: 350
+  z_threshold: 3
+  detector_ewma_alpha: 0.2
+  cusum_k: 0.5
+  cusum_h: 5
   hysteresis: 0.5
-ppm:
-  enabled: false
-  rs_r0: 1.0
-output:
-  save_csv: "data/sample_sim.csv"
-  make_plot: true
-  plot_path: "data/plot.png"
+  baseline_window_samples: 20
+  preprocessing_smoothing_enabled: true
+  preprocessing_smoothing_alpha: 0.2
+database_url: sqlite:///results/methane_monitor.db
