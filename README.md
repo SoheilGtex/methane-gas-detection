@@ -1,5 +1,11 @@
 # Methane Monitoring & Statistical Anomaly Detection
 
+[![CI](https://github.com/SoheilGtex/methane-gas-detection/actions/workflows/ci.yml/badge.svg)](https://github.com/SoheilGtex/methane-gas-detection/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/SoheilGtex/methane-gas-detection)](https://github.com/SoheilGtex/methane-gas-detection/releases/latest)
+![Python](https://img.shields.io/badge/python-3.11%20%7C%203.12-blue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+
 A reproducible Python platform for simulated or serial sensor streams, statistical change detection, SQLite persistence, and controlled experiments. It is **not certified gas-safety equipment**.
 
 ## Scientific scope and limits
